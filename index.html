@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wildcat 1920 Properties | Kokomo, Indiana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --steel:#1C2A3A;
+      --iron:#2E3F52;
+      --amber:#D4862A;
+      --amber-lt:#E8A04A;
+      --cream:#F5F1EB;
+      --white:#FFFFFF;
+      --mid:#6B7B8C;
+      --light:#C8D2DC;
+      --gap:clamp(3rem,6vw,6rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--steel);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top:0; left:0; right:0;
+      z-index:100;
+      background: rgba(28,42,58,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid var(--amber);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 clamp(1rem,5vw,3rem);
+      height:68px;
+    }
+
+    .nav-logo {
+      font-family:'Barlow Condensed',sans-serif;
+      font-weight:800;
+      font-size:1.5rem;
+      letter-spacing:0.04em;
+      color:var(--white);
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+
+    .nav-logo span { color:var(--amber); }
+
+    .nav-links {
+      display:flex;
+      gap:2rem;
+      list-style:none;
+    }
+
+    .nav-links a {
+      font-family:'Barlow Condensed',sans-serif;
+      font-weight:600;
+      text-transform:uppercase;
+      color:var(--light);
+      text-decoration:none;
+    }
+
+    .nav-links a:hover { color:var(--amber); }
+
+    .nav-cta {
+      background:var(--amber);
+      color:#fff !important;
+      padding:0.5rem 1.2rem;
+      border-radius:3px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height:100vh;
+      background:
+        linear-gradient(165deg, rgba(28,42,58,0.88), rgba(46,63,82,0.72), rgba(212,134,42,0.18)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      padding:120px clamp(1.5rem,8vw,6rem) 80px;
+    }
+
+    .hero h1 {
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:clamp(3rem,7vw,5.5rem);
+      color:var(--white);
+      text-transform:uppercase;
+      line-height:0.95;
+    }
+
+    .accent { color:var(--amber); }
+
+    .hero p { color:var(--light); max-width:520px; margin-top:1rem; }
+
+    .btn-primary {
+      display:inline-block;
+      margin-top:2rem;
+      background:var(--amber);
+      color:#fff;
+      padding:0.9rem 1.8rem;
+      text-decoration:none;
+      font-family:'Barlow Condensed';
+      text-transform:uppercase;
+      font-weight:700;
+    }
+
+    /* SERVICES */
+    section { padding: var(--gap) clamp(1.5rem,8vw,6rem); }
+
+    .section-title {
+      font-family:'Barlow Condensed';
+      font-size:2.5rem;
+      text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+
+    .services-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.5rem;
+      margin-top:3rem;
+    }
+
+    .service-card {
+      background:var(--cream);
+      border:1px solid var(--light);
+      padding:2rem;
+      border-radius:6px;
+    }
+
+    .service-card h3 {
+      font-family:'Barlow Condensed';
+      text-transform:uppercase;
+      margin-bottom:0.5rem;
+    }
+
+    /* ABOUT */
+    #about {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:3rem;
+      align-items:center;
+    }
+
+    /* CTA */
+    .cta-banner {
+      background:linear-gradient(135deg,var(--steel),var(--iron));
+      color:#fff;
+      text-align:center;
+      padding:5rem 2rem;
+    }
+
+    footer {
+      background:var(--steel);
+      color:var(--light);
+      padding:3rem;
+    }
+
+    @media(max-width:900px){
+      #about { grid-template-columns:1fr; }
+      .nav-links { display:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a class="nav-logo">Wildcat <span>1920</span> Properties</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Estimate</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Built Right.<br><span class="accent">Managed Right.</span><br>Guaranteed.</h1>
+    <p>Wildcat 1920 Properties delivers high-quality property management, renovation coordination, and real estate solutions across Kokomo and surrounding Indiana communities.</p>
+    <a href="#contact" class="btn-primary">Request Estimate</a>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Property Management</h3>
+      <p>Full-service rental and property oversight.</p>
+    </div>
+    <div class="service-card">
+      <h3>Renovation Oversight</h3>
+      <p>Contractor coordination and project management.</p>
+    </div>
+    <div class="service-card">
+      <h3>Real Estate Support</h3>
+      <p>Buy, sell, and investment property guidance.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div>
+    <h2 class="section-title">Who We Are</h2>
+    <p>Wildcat 1920 Properties is built on reliability, transparency, and long-term property value creation in Indiana markets.</p>
+  </div>
+</section>
+
+<div class="cta-banner" id="contact">
+  <h2>Start Your Project Today</h2>
+  <p>Contact Wildcat 1920 Properties for a free consultation.</p>
+  <a class="btn-primary" href="tel:7654319216">Call Now</a>
+</div>
+
+<footer>
+  <p>© 2026 Wildcat 1920 Properties · Kokomo, Indiana</p>
+</footer>
+
+</body>
+</html>
