@@ -1,311 +1,161 @@
-/* =========================
-   WILDCAT 1920 PROPERTIES
-   PREMIUM REAL ESTATE THEME
-========================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Inter", sans-serif;
-  background: #0b0f14;
-  color: #ffffff;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0e1116;
+  color: white;
 }
 
-/* Containers */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAV */
 .nav {
   position: fixed;
-  top: 0;
   width: 100%;
-  background: rgba(11, 15, 20, 0.85);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0,0,0,0.7);
+  padding: 15px 0;
+  z-index: 10;
 }
 
-.nav-container {
+.nav-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
 }
 
 .logo span {
-  color: #c9a24e;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  color: #d4a24c;
 }
 
 .nav-links a {
-  color: #fff;
+  color: white;
+  margin-left: 15px;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: #c9a24e;
-}
-
-.btn-small {
-  padding: 8px 14px;
-  background: #c9a24e;
-  color: #0b0f14 !important;
+.btn {
+  background: #d4a24c;
+  padding: 8px 12px;
   border-radius: 4px;
-  font-weight: 600;
+  color: black !important;
 }
 
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero {
   height: 100vh;
-  background: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2000&q=80")
-    center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.hero-overlay {
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
   position: relative;
-  max-width: 700px;
   margin-left: 8%;
+  max-width: 600px;
 }
 
 .hero h1 {
-  font-size: 52px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 48px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  color: #ddd;
-}
-
-/* Buttons */
 .hero-buttons {
-  display: flex;
-  gap: 15px;
+  margin-top: 20px;
 }
 
 .btn-primary {
-  background: #c9a24e;
-  color: #0b0f14;
-  padding: 12px 22px;
+  background: #d4a24c;
+  padding: 12px 18px;
+  color: black;
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
+  margin-right: 10px;
 }
 
-.btn-secondary {
-  border: 1px solid #c9a24e;
-  color: #c9a24e;
-  padding: 12px 22px;
+.btn-outline {
+  border: 1px solid #d4a24c;
+  padding: 12px 18px;
+  color: #d4a24c;
   text-decoration: none;
-  border-radius: 4px;
 }
 
-/* =========================
-   STATS
-========================= */
-
-.stats {
-  background: #0f141b;
-  padding: 60px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  text-align: center;
-}
-
-.stat h2 {
-  font-size: 28px;
-  color: #c9a24e;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
+/* SECTIONS */
 .section {
   padding: 80px 0;
 }
 
-.section.dark {
-  background: #0f141b;
+.dark {
+  background: #141922;
 }
 
-.section-title {
+.title {
   text-align: center;
-  font-size: 32px;
   margin-bottom: 40px;
 }
 
-/* =========================
-   LAYOUTS
-========================= */
-
-.split {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.grid-3 {
+/* GRID */
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-/* =========================
-   CARDS
-========================= */
-
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #c9a24e;
+/* WORK */
+.work-card {
+  height: 200px;
+  background: #222;
+  border-radius: 10px;
+}
+
+/* ABOUT */
+.split {
+  display: flex;
+  gap: 40px;
 }
 
 .highlight {
-  border: 1px solid #c9a24e;
-}
-
-/* Property Cards */
-.property-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
   border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: 0.3s;
 }
 
-.property-card:hover {
-  transform: translateY(-5px);
-}
-
-.property-img {
-  height: 180px;
-  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80")
-    center/cover;
-}
-
-/* =========================
-   FORM
-========================= */
-
-.contact-form {
+/* FORM */
+.form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 100%;
+  gap: 10px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
+.form input, .form textarea {
+  padding: 10px;
+  border: none;
   border-radius: 5px;
-  border: none;
-  outline: none;
-  background: #1a222d;
-  color: white;
 }
 
-.contact-form button {
-  background: #c9a24e;
-  border: none;
+.form button {
+  background: #d4a24c;
   padding: 12px;
-  font-weight: 600;
-  cursor: pointer;
+  border: none;
+  font-weight: bold;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
-  padding: 20px 0;
   text-align: center;
-  background: #0b0f14;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .split {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    display: none;
-  }
+  padding: 20px;
+  background: black;
 }
