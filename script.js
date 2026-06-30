@@ -1,92 +1,161 @@
-document.addEventListener("DOMContentLoaded", () => {
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0e1116;
+  color: white;
+}
 
-  /* =========================
-     SMOOTH SCROLLING
-  ========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  const links = document.querySelectorAll("a[href^='#']");
+/* NAV */
+.nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 15px 0;
+  z-index: 10;
+}
 
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      const targetId = this.getAttribute("href");
-      const target = document.querySelector(targetId);
+.logo span {
+  color: #d4a24c;
+}
 
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 70,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
+.nav-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
 
-  /* =========================
-     FORM HANDLING (STATIC)
-  ========================= */
+.btn {
+  background: #d4a24c;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: black !important;
+}
 
-  const form = document.querySelector(".contact-form");
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
 
-      const name = this.querySelector("input[type='text']").value;
-      const email = this.querySelector("input[type='email']").value;
-      const phone = this.querySelector("input[type='tel']").value;
+.hero-content {
+  position: relative;
+  margin-left: 8%;
+  max-width: 600px;
+}
 
-      if (!name || !email || !phone) {
-        alert("Please fill out all required fields.");
-        return;
-      }
+.hero h1 {
+  font-size: 48px;
+}
 
-      // Simulated success (GitHub Pages has no backend)
-      alert("Thank you! We will contact you within 24 hours.");
+.hero-buttons {
+  margin-top: 20px;
+}
 
-      this.reset();
-    });
-  }
+.btn-primary {
+  background: #d4a24c;
+  padding: 12px 18px;
+  color: black;
+  text-decoration: none;
+  margin-right: 10px;
+}
 
-  /* =========================
-     SCROLL ANIMATIONS
-  ========================= */
+.btn-outline {
+  border: 1px solid #d4a24c;
+  padding: 12px 18px;
+  color: #d4a24c;
+  text-decoration: none;
+}
 
-  const animatedElements = document.querySelectorAll(".card, .property-card, .stat");
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = "translateY(0)";
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+.dark {
+  background: #141922;
+}
 
-  animatedElements.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(20px)";
-    el.style.transition = "all 0.6s ease-out";
-    observer.observe(el);
-  });
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-  /* =========================
-     NAV SHRINK EFFECT
-  ========================= */
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
-  const nav = document.querySelector(".nav");
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      nav.style.padding = "5px 0";
-      nav.style.background = "rgba(11, 15, 20, 0.95)";
-    } else {
-      nav.style.padding = "0";
-      nav.style.background = "rgba(11, 15, 20, 0.85)";
+/* WORK */
+.work-card {
+  height: 200px;
+  background: #222;
+  border-radius: 10px;
+}
+
+/* ABOUT */
+.split {
+  display: flex;
+  gap: 40px;
+}
+
+.highlight {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input, .form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  background: #d4a24c;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
     }
-  });
-
-});
